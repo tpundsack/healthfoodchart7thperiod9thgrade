@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Health Tables</title>
+    <title>Health Tables</title>
     <!-- Material Design Lite -->
+    <script>console.log("https://www.nutritionix.com/dashboard/2019-04-01");</script>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
     <!-- Material Design icon font -->
@@ -21,39 +22,266 @@
   <h4 style="position:relative;top:-148px;left:83px;font-family:Roboto;filter:blur(2px);font-weight:1000;font-size:18px" id="subbg">7th Period Health</h4>
   <h4 style="position:relative;top:-205px;left:82px;font-family:Roboto;color:#fff;font-weight:1000;font-size:18px" id="subtitle">7th Period Health</h4>
   </div>
-  <div style="position:absolute;width:80%;height:80%;top:10%;left:10%;background-color:#fff;overflow:scroll;padding-left:15px;padding-right:15px" class="mdl-card mdl-shadow--24dp"><h2>Sunday</h2><table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <div style="position:absolute;width:80%;height:80%;top:10%;left:10%;background-color:#fff;overflow:scroll;padding-left:15px;padding-right:15px" class="mdl-card mdl-shadow--24dp"><h2 style='display:none'>Monday</h2>
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="position:relative;padding:0 0 0 0;border:0 0 0 0;margin:0 0 0 0;margin-top:15px;">
   <thead>
     <tr>
-      <th class="mdl-data-table__cell--non-numeric">Food Eaten</th>
+      <th class="mdl-data-table__cell--non-numeric"><b style="line-height:0 !important;font-weight:1000;position:absolute;top:12px">Monday<br></b>Food Eaten</th>
       <th>Serving Size (# Eaten)</th>
-      <th>Calories</th>
-      <th>Sodium</th>
-      <th>Fat (Total)</th>
-      <th>Carbs</th>
-      <th>Protein</th>
+      <th>Calories (2000)<div id="monCal" style="width:inherit;position:relative;" class="mdl-progress progressoverflow mdl-js-progress"></div>
+<script>
+  document.querySelector('#monCal').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress(100);
+  });
+</script><div id="monCal2" style="width:inherit;position:relative;" class="mdl-progress progressoverflow mdl-js-progress"></div>
+<script>
+  document.querySelector('#monCal2').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress(((720+360+460+599)/2000)*100-100);
+  });
+</script></th>
+      <th>Sodium (2300mg)<div id="monSod" style="width:inherit;position:relative;" class="mdl-progress progressoverflow mdl-js-progress"></div>
+<script>
+  document.querySelector('#monSod').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress(100);
+  });
+</script><div id="monSod2" style="width:inherit;position:relative;" class="mdl-progress progressoverflow mdl-js-progress"></div>
+<script>
+  document.querySelector('#monSod2').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((((320+670+540+973)/2300)*100)-100);
+  });
+</script></th>
+      <th>Total Fat (67g)<div id="monFat" style="width:inherit;position:relative;" class="mdl-progress progressoverflow mdl-js-progress"></div>
+<script>
+  document.querySelector('#monFat').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress(((9+24+0+19)/67)*100);
+  });
+</script></th>
+      <th>Carbs (325g)<div id="monCarbs" style="width:inherit;position:relative;" class="mdl-progress progressoverflow mdl-js-progress"></div>
+<script>
+  document.querySelector('#monCarbs').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress(((70+22+60+56)/325)*100);
+  });
+</script></th>
+      <th>Protein (56g)<div id="monPro" style="width:inherit;position:relative;" class="mdl-progress progressoverflow mdl-js-progress"></div>
+<script>
+  document.querySelector('#monPro').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress(((4+8+24+17)/56)*100);
+  });
+</script></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td class="mdl-data-table__cell--non-numeric">Breakfast<br>Pop Tart (Strawberry)</td>
       <td>1 (2 Eaten)</td>
-      <td>380</td>
-      <td>320mg</td>
-      <td>9g</td>
-      <td>70g</td>
-      <td>4g</td>
+      <td>380<div id="p1" style="width:inherit;position:relative;" class="mdl-progress progressoverflow mdl-js-progress"></div>
+<script>
+  document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((380/2000)*100);
+  });
+</script></td>
+      <td>320mg<div id="p2" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p2').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((320/2300)*100);
+  });
+</script></td>
+      <td>9g<div id="p5" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p5').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((9/67)*100);
+  });
+</script></td>
+      <td>70g<div id="p6" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p6').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((70/325)*100);
+  });
+</script></td>
+      <td>4g<div id="p7" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p7').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((4/56)*100);
+  });
+</script></td>
     </tr>
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Lunch<br>Sample</td>
-      <td>50</td>
-      <td>9999</td>
-      <td>420g</td>
+      <td class="mdl-data-table__cell--non-numeric">Breakfast<br>Mini Sausage Biscuits</td>
+      <td>2 Biscuits</td>
+      <td>340<div id="p3" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p3').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((340/2000)*100);
+  });
+</script></td>
+      <td>670mg<div id="p4" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p4').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((670/2300)*100);
+  });
+</script></td>
+      <td>24g<div id="p8" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p8').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((24/67)*100);
+  });
+</script></td>
+      <td>22g<div id="p9" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p9').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((22/325)*100);
+  });
+</script></td>
+      <td>8g<div id="p10" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p10').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((8/56)*100);
+  });
+</script></td>
     </tr>
+    
+    
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Dinner<br>Sample</td>
-      <td>10</td>
-      <td>9999</td>
-      <td>420g</td>
+      <td class="mdl-data-table__cell--non-numeric">Drink<br>TruMoo Chocolate Milk Cartons</td>
+      <td>1 Carton (3 Drank)</td>
+      <td>360<div id="p11" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p11').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((360/2000)*100);
+  });
+</script></td>
+      <td>540mg<div id="p12" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p12').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((540/2300)*100);
+  });
+</script></td>
+      <td>0g<div id="p13" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p13').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((0/67)*100);
+  });
+</script></td>
+      <td>60g<div id="p14" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p14').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((60/325)*100);
+  });
+</script></td>
+      <td>24g<div id="p15" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p15').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((24/56)*100);
+  });
+</script></td>
+    </tr>
+    
+    
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Lunch<br>Corn Dog</td>
+      <td>1 Sandwich</td>
+      <td>460<div id="p16" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p16').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((460/2000)*100);
+  });
+</script></td>
+      <td>973mg<div id="p17" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p17').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((973/2300)*100);
+  });
+</script></td>
+      <td>19g<div id="p18" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p18').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((19/67)*100);
+  });
+</script></td>
+      <td>56g<div id="p19" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p19').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((56/325)*100);
+  });
+</script></td>
+      <td>17g<div id="p20" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p20').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((17/56)*100);
+  });
+</script></td>
+    </tr>
+    
+    
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Drink<br>Orange Vanilla Coca Cola</td>
+      <td>1 Can</td>
+      <td>140<div id="p21" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p21').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((140/2000)*100);
+  });
+</script></td>
+      <td>35mg<div id="p22" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p22').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((35/2300)*100);
+  });
+</script></td>
+      <td>19g<div id="p23" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p23').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((19/67)*100);
+  });
+</script></td>
+      <td>insignificant<div id="p24" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p24').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setBuffer(0);
+  });
+</script></td>
+      <td>0g<div id="p25" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p25').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((0/56)*100);
+  });
+</script></td>
+    </tr>
+    
+    
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Dinner<br>Hot Dog w/ Bun</td>
+      <td>1 Sandwich (2 Eaten)</td>
+      <td>599<div id="p26" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p26').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((599/2000)*100);
+  });
+</script></td>
+      <td>35mg<div id="p22" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p22').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((35/2300)*100);
+  });
+</script></td>
+      <td>19g<div id="p23" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p23').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((19/67)*100);
+  });
+</script></td>
+      <td>insignificant<div id="p24" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p24').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setBuffer(0);
+  });
+</script></td>
+      <td>0g<div id="p25" style="width:inherit;position:relative;" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p25').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress((0/56)*100);
+  });
+</script></td>
     </tr>
   </tbody>
 </table><table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
